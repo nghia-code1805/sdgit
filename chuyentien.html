@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển tiền</title>
+</head>
+<body>
+        <p>Amount</p><input id="tien">
+        <select id="tien01">
+            <option value="22000">USD</option>
+            <option value="1">VND</option>
+        </select>
+        <p>chuyển</p><input disabled id="chuyen">
+        <select id="tien02">
+            <option value="22000">USD</option>
+            <option value="1">VND</option>
+        </select>
+        <button onclick="chuyentien()"> chuyển tiền</button>
+<script>
+    function chuyentien() {
+        let c=parseInt(document.getElementById("tien").value);
+        let a=parseInt(document.getElementById("tien01").value);
+        let b=parseInt(document.getElementById("tien02").value);
+        let x=(c*a)/b;
+        document.getElementById("chuyen").value=x;
+
+    }
+</script>
+</body>
+</html>
