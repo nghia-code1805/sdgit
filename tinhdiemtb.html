@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>TÍNH ĐIỂM TRUNG BÌNH</h1>
+    <p>vật lý <input type="number" id="vatly"></p>
+    <p>hóa học <input type="number" id="hoahoc"></p>
+    <p>sinh học <input type="number" id="sinhhoc"></p>
+    <p>kết quả <input disabled type="number" id="ketqua"></p>
+    <button onclick="diemtb()"> tính điểm </button>
+    <script>
+        function diemtb() {
+            let a=+document.getElementById("vatly").value;
+            let b=+document.getElementById("hoahoc").value;
+            let c=+document.getElementById("sinhhoc").value;
+            let kq=(a+b+c)/3;
+            //alert(kq);
+            document.getElementById("ketqua").value=kq;
+
+        }
+    </script>
+</div>
+<div>
+    <h1>CHUYỂN ĐỔI GIÁ TRỊ C&F</h1>
+    <input id="nhapc">
+    <select id="d">
+        <option value="1">F</option>
+        <option value="33.8">C</option>
+    </select>
+
+    <dl></dl>
+    <input disabled id="nhapf">
+    <select id="f">
+        <option value="1">F</option>
+        <option value="33.8">C</option>
+    </select>
+    <dl></dl>
+    <button onclick="chuyendoi01()">chuyển đổi</button>
+    <script>
+        function chuyendoi01() {
+            let a1=document.getElementById("nhapc").value;
+            let b1=document.getElementById("d").value;
+            let c1=document.getElementById("f").value;
+            let Fc=(a1*b1)/c1;
+            document.getElementById("nhapf").value=Fc;
+        }
+    </script>
+</div>
+<div>
+    <h1>DIỆN TÍCH HÌNH TRÒN</h1>
+    <p>bán kính<input id="bk"></p>
+    <p>kết quả diện tích<input disabled id="ketqua02"></p>
+    <p>kết quả chu vi<input disabled id="ketqua03" ></p>
+    <p><button onclick="chuyendoi02()"> kết quả</button></p>
+    <script>
+        function chuyendoi02() {
+            let a2=document.getElementById("bk").value;
+            let kq02=a2*a2*3.14;
+            let kq03=a2*2*3.14;
+            document.getElementById("ketqua02").value=kq02;
+            document.getElementById("ketqua03").value=kq03;
+        }
+    </script>
+</div>
+<div>
+    
+</div>
+</body>
+</html>
